@@ -23,6 +23,9 @@
 </template>
 
 <script>
+import slugify from 'slugify';
+import db from '@/firebase/init';
+
 export default {
   name: 'Signup',
   data() {
@@ -31,11 +34,27 @@ export default {
       password: null,
       alias: null,
       feedback: null,
+      slug: null,
     };
   },
   methods: {
     signup() {
       if (this.alias) {
+        this.slug = slugify(this.alias, {
+          replacement: '-',
+          remove: /[$*_+~.()'"!\-:@]/g,
+          lower: true,
+        });
+
+        let ref = db.collection('users').doc(this.slug);
+        ref.get().then(doc => {
+          if (doc.exists) {
+            this.feedback = 'This alias already exists';
+          } else {
+            this.feedback = 'This alias is free to use';
+          }
+        });
+
         this.feedback = '';
       } else {
         this.feedback = 'Must enter alias';
