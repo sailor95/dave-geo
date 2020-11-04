@@ -2,7 +2,6 @@
   <div class="navbar">
     <nav class="deep-purple darken-1">
       <div class="container">
-        <!-- <a href="" class="brand-logo">Ninja Geo</a> -->
         <router-link class="brand-logo" :to="{ name: 'GMap' }"
           >Ninja Geo</router-link
         >
@@ -30,7 +29,7 @@ export default {
         .auth()
         .signOut()
         .then(() => {
-          this.$router.push({ name: 'Signup' });
+          this.$router.push({ name: 'Login' });
         });
     },
   },
