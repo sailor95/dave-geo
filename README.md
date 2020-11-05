@@ -1,4 +1,4 @@
-# ninja-geo
+# dave-geo
 
 A Vue.js SPA with real-time comment function hosted on Google Firebase, using Google Map Api.
 
