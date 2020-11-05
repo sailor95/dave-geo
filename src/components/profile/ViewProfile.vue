@@ -19,7 +19,7 @@ export default {
   created() {
     let ref = db.collection('users');
     ref
-      .doc(this.$router.params.id)
+      .doc(this.$route.params.id)
       .get()
       .then(user => {
         this.profile = user.data();
