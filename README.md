@@ -6,10 +6,10 @@ Demo link: https://ninja-geo-c0636.web.app/
 
 ## Screenshot
 
-You can click on an user's map marker to comment on their board in realtime:  
+You can click on an user's map marker to comment on their board in realtime:
 
-![Screenshot1](./src/res/ss.png)
+![Screenshot1](./src/assets/ss1.png)
 
-You can also see all the user's geo-location on the map:  
+You can also see all the user's geo-location on the map:
 
-![Screenshot2](./src/res/ss2.png)
+![Screenshot2](./src/assets/ss2.png)
